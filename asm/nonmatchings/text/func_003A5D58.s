@@ -1,0 +1,43 @@
+.align 3
+nonmatching func_003A5D58, 0x80
+
+glabel func_003A5D58
+    /* 1D16D8 003A5D58 2000BD27 */  addiu      $sp, $sp, 0x20
+    /* 1D16DC 003A5D5C 00000000 */  nop
+    /* 1D16E0 003A5D60 E0FFBD27 */  addiu      $sp, $sp, -0x20
+    /* 1D16E4 003A5D64 1E00023C */  lui        $v0, %hi(D_001D8200)
+    /* 1D16E8 003A5D68 00824224 */  addiu      $v0, $v0, %lo(D_001D8200)
+    /* 1D16EC 003A5D6C 0000B0FF */  sd         $s0, 0x0($sp)
+    /* 1D16F0 003A5D70 0800B1FF */  sd         $s1, 0x8($sp)
+    /* 1D16F4 003A5D74 2D808000 */  daddu      $s0, $a0, $zero
+    /* 1D16F8 003A5D78 1000BFFF */  sd         $ra, 0x10($sp)
+    /* 1D16FC 003A5D7C 240002AE */  sw         $v0, 0x24($s0)
+    /* 1D1700 003A5D80 2000048E */  lw         $a0, 0x20($s0)
+    /* 1D1704 003A5D84 0C008010 */  beqz       $a0, .L003A5DB8
+    /* 1D1708 003A5D88 2D88A000 */   daddu     $s1, $a1, $zero
+    /* 1D170C 003A5D8C 38000292 */  lbu        $v0, 0x38($s0)
+    /* 1D1710 003A5D90 04004054 */  bnel       $v0, $zero, .L003A5DA4
+    /* 1D1714 003A5D94 39000292 */   lbu       $v0, 0x39($s0)
+    /* 1D1718 003A5D98 689A0E0C */  jal        func_003A69A0
+    /* 1D171C 003A5D9C 2800058E */   lw        $a1, 0x28($s0)
+    /* 1D1720 003A5DA0 39000292 */  lbu        $v0, 0x39($s0)
+.align 2
+  .L003A5DA4:
+    /* 1D1724 003A5DA4 05004014 */  bnez       $v0, .L003A5DBC
+    /* 1D1728 003A5DA8 2D200002 */   daddu     $a0, $s0, $zero
+    /* 1D172C 003A5DAC 2000048E */  lw         $a0, 0x20($s0)
+    /* 1D1730 003A5DB0 689A0E0C */  jal        func_003A69A0
+    /* 1D1734 003A5DB4 2C00058E */   lw        $a1, 0x2C($s0)
+.align 2
+  .L003A5DB8:
+    /* 1D1738 003A5DB8 2D200002 */  daddu      $a0, $s0, $zero
+.align 2
+  .L003A5DBC:
+    /* 1D173C 003A5DBC F0960E0C */  jal        func_003A5BC0
+    /* 1D1740 003A5DC0 2D282002 */   daddu     $a1, $s1, $zero
+    /* 1D1744 003A5DC4 0000B0DF */  ld         $s0, 0x0($sp)
+    /* 1D1748 003A5DC8 0800B1DF */  ld         $s1, 0x8($sp)
+    /* 1D174C 003A5DCC 1000BFDF */  ld         $ra, 0x10($sp)
+    /* 1D1750 003A5DD0 0800E003 */  jr         $ra
+    /* 1D1754 003A5DD4 2000BD27 */   addiu     $sp, $sp, 0x20
+endlabel func_003A5D58

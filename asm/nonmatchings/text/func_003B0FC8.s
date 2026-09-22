@@ -1,0 +1,31 @@
+.align 3
+nonmatching func_003B0FC8, 0x5C
+
+glabel func_003B0FC8
+    /* 1DC948 003B0FC8 1400023C */  lui        $v0, (0x143A07 >> 16)
+    /* 1DC94C 003B0FCC 073A4490 */  lbu        $a0, (0x143A07 & 0xFFFF)($v0)
+    /* 1DC950 003B0FD0 0800832C */  sltiu      $v1, $a0, 0x8
+    /* 1DC954 003B0FD4 11006010 */  beqz       $v1, .L003B101C
+    /* 1DC958 003B0FD8 3200023C */   lui       $v0, %hi(jtbl_00318820)
+    /* 1DC95C 003B0FDC 80180400 */  sll        $v1, $a0, 2
+    /* 1DC960 003B0FE0 20884224 */  addiu      $v0, $v0, %lo(jtbl_00318820)
+    /* 1DC964 003B0FE4 21186200 */  addu       $v1, $v1, $v0
+    /* 1DC968 003B0FE8 0000648C */  lw         $a0, 0x0($v1)
+    /* 1DC96C 003B0FEC 08008000 */  jr         $a0
+    /* 1DC970 003B0FF0 00000000 */   nop
+    /* 1DC974 003B0FF4 0800E003 */  jr         $ra
+    /* 1DC978 003B0FF8 51010224 */   addiu     $v0, $zero, 0x151
+    /* 1DC97C 003B0FFC 0800E003 */  jr         $ra
+    /* 1DC980 003B1000 53010224 */   addiu     $v0, $zero, 0x153
+    /* 1DC984 003B1004 0800E003 */  jr         $ra
+    /* 1DC988 003B1008 52010224 */   addiu     $v0, $zero, 0x152
+    /* 1DC98C 003B100C 0800E003 */  jr         $ra
+    /* 1DC990 003B1010 54010224 */   addiu     $v0, $zero, 0x154
+    /* 1DC994 003B1014 0800E003 */  jr         $ra
+    /* 1DC998 003B1018 50010224 */   addiu     $v0, $zero, 0x150
+.align 2
+  .L003B101C:
+    /* 1DC99C 003B101C 0800E003 */  jr         $ra
+    /* 1DC9A0 003B1020 50010224 */   addiu     $v0, $zero, 0x150
+endlabel func_003B0FC8
+    /* 1DC9A4 003B1024 00000000 */  nop

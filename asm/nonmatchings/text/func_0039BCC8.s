@@ -1,0 +1,28 @@
+.align 3
+nonmatching func_0039BCC8
+
+dlabel func_0039BCC8
+    /* 1C7648 0039BCC8 0F000000 */ .word 0x0000000F
+    /* 1C764C 0039BCCC 00C00840 */ .word 0x4008C000
+.align 3
+    /* 1C7650 0039BCD0 C20F093C */ .word 0x3C090FC2
+    /* 1C7654 0039BCD4 F87F2935 */ .word 0x35297FF8
+.align 3
+    /* 1C7658 0039BCD8 24400901 */ .word 0x01094024
+    /* 1C765C 0039BCDC 00C08840 */ .word 0x4088C000
+.align 3
+    /* 1C7660 0039BCE0 0F040000 */ .word 0x0000040F
+    /* 1C7664 0039BCE4 04C08440 */ .word 0x4084C004 /* invalid instruction */
+.align 3
+    /* 1C7668 0039BCE8 05C08540 */ .word 0x4085C005 /* invalid instruction */
+    /* 1C766C 0039BCEC 3820093C */ .word 0x3C092038
+.align 3
+    /* 1C7670 0039BCF0 25400901 */ .word 0x01094025
+    /* 1C7674 0039BCF4 00C08840 */ .word 0x4088C000
+.align 3
+    /* 1C7678 0039BCF8 0F040000 */ .word 0x0000040F
+    /* 1C767C 0039BCFC 0800E003 */ .word 0x03E00008
+.align 3
+    /* 1C7680 0039BD00 00000000 */ .word func_0
+    /* 1C7684 0039BD04 00000000 */ .word func_0
+enddlabel func_0039BCC8
