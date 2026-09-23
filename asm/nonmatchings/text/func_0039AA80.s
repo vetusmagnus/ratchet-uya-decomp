@@ -2,15 +2,15 @@
 nonmatching func_0039AA80, 0x6C
 
 glabel func_0039AA80
-    /* 1C6400 0039AA80 FFFF0224 */  addiu      $v0, $zero, -0x1
+    /* 1C6400 0039AA80 FFFF0224 */  addiu      $2, $0, -0x1
     /* 1C6404 0039AA84 00000000 */  nop
     /* 1C6408 0039AA88 3000BD27 */  addiu      $sp, $sp, 0x30
     /* 1C640C 0039AA8C 00000000 */  nop
-    /* 1C6410 0039AA90 FFFF0224 */  addiu      $v0, $zero, -0x1
+    /* 1C6410 0039AA90 FFFF0224 */  addiu      $2, $0, -0x1
     /* 1C6414 0039AA94 00000000 */  nop
-    /* 1C6418 0039AA98 2A100200 */  slt        $v0, $zero, $v0
+    /* 1C6418 0039AA98 2A100200 */  slt        $2, $0, $2
     /* 1C641C 0039AA9C 00000000 */  nop
-    /* 1C6420 0039AAA0 0B10C400 */  movn       $v0, $a2, $a0
+    /* 1C6420 0039AAA0 0B10C400 */  movn       $2, $6, $4
     /* 1C6424 0039AAA4 00000000 */  nop
     /* 1C6428 0039AAA8 2000BD27 */  addiu      $sp, $sp, 0x20
     /* 1C642C 0039AAAC 00000000 */  nop
@@ -22,7 +22,7 @@ glabel func_0039AA80
     /* 1C6444 0039AAC4 00000000 */  nop
     /* 1C6448 0039AAC8 1000BD27 */  addiu      $sp, $sp, 0x10
     /* 1C644C 0039AACC 00000000 */  nop
-    /* 1C6450 0039AAD0 2D10C000 */  daddu      $v0, $a2, $zero
+    /* 1C6450 0039AAD0 2D10C000 */  daddu      $2, $6, $0
     /* 1C6454 0039AAD4 00000000 */  nop
     /* 1C6458 0039AAD8 00000000 */  nop
     /* 1C645C 0039AADC 00000000 */  nop

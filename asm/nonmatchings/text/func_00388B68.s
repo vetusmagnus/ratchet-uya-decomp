@@ -8,10 +8,10 @@ glabel func_00388B68
     /* 1B44F4 00388B74 3C03E44B */  vmove.xyzw $vf4, $vf0
     /* 1B44F8 00388B78 4308004B */  vaddw.x    $vf1, $vf1, $vf0w
     /* 1B44FC 00388B7C 8310804A */  vaddw.y    $vf2, $vf2, $vf0w
-    /* 1B4500 00388B80 000081F8 */  sqc2       $vf1, 0x0($a0)
-    /* 1B4504 00388B84 100082F8 */  sqc2       $vf2, 0x10($a0)
-    /* 1B4508 00388B88 200083F8 */  sqc2       $vf3, 0x20($a0)
-    /* 1B450C 00388B8C 300084F8 */  sqc2       $vf4, 0x30($a0)
-    /* 1B4510 00388B90 0800E003 */  jr         $ra
+    .word 0xF8810000 /* .word 0xF8810000 */
+    .word 0xF8820010 /* .word 0xF8820010 */
+    .word 0xF8830020 /* .word 0xF8830020 */
+    .word 0xF8840030 /* .word 0xF8840030 */
+    /* 1B4510 00388B90 0800E003 */  jr         $31
     /* 1B4514 00388B94 00000000 */   nop
 endlabel func_00388B68

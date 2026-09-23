@@ -8,6 +8,6 @@ glabel func_00380D28
     /* 1AC6B4 00380D34 00000000 */  nop
     /* 1AC6B8 00380D38 00000000 */  nop
     /* 1AC6BC 00380D3C 00000000 */  nop
-    /* 1AC6C0 00380D40 040040AC */  sw         $zero, 0x4($v0)
+    /* 1AC6C0 00380D40 040040AC */  sw         $0, 0x4($2)
 endlabel func_00380D28
     /* 1AC6C4 00380D44 00000000 */  nop

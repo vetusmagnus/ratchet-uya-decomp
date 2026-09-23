@@ -9,7 +9,7 @@ glabel func_003CD470
     /* 1F8E00 003CD480 8F49E54B */   vmsubw.xyzw $vf6, $vf9, $vf5w
 .align 2
   alabel D_003CD484
-    /* 1F8E04 003CD484 B2FF4014 */  bnez       $v0, .L003CD350
+    /* 1F8E04 003CD484 B2FF4014 */  bnez       $2, .L003CD350
     /* 1F8E08 003CD488 00000000 */   nop
     /* 1F8E0C 003CD48C 44350F0C */  jal        func_003CD510
     /* 1F8E10 003CD490 00000000 */   nop
@@ -17,7 +17,7 @@ glabel func_003CD470
     /* 1F8E18 003CD498 00000000 */   nop
 .align 2
   .L003CD49C:
-    /* 1F8E1C 003CD49C 3D00073C */  lui        $a3, %hi(D_003CD44C)
-    /* 1F8E20 003CD4A0 4CD4E724 */  addiu      $a3, $a3, %lo(D_003CD44C)
-    /* 1F8E24 003CD4A4 2DF8C000 */  daddu      $ra, $a2, $zero
+    /* 1F8E1C 003CD49C 3D00073C */  lui        $7, %hi(D_003CD44C)
+    /* 1F8E20 003CD4A0 4CD4E724 */  addiu      $7, $7, %lo(D_003CD44C)
+    /* 1F8E24 003CD4A4 2DF8C000 */  daddu      $31, $6, $0
 endlabel func_003CD470

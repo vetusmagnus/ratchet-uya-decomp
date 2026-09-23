@@ -2,12 +2,12 @@
 nonmatching func_00389240, 0x98
 
 glabel func_00389240
-    /* 1B4BC0 00389240 000088D8 */  lqc2       $vf8, 0x0($a0)
-    /* 1B4BC4 00389244 0000A1D8 */  lqc2       $vf1, 0x0($a1)
+    .word 0xD8880000 /* .word 0xD8880000 */
+    .word 0xD8A10000 /* .word 0xD8A10000 */
     /* 1B4BC8 00389248 9803E04B */  vmulx.xyzw $vf14, $vf0, $vf0x
     /* 1B4BCC 0038924C D803E04B */  vmulx.xyzw $vf15, $vf0, $vf0x
     /* 1B4BD0 00389250 3D03F04B */  vmr32.xyzw $vf16, $vf0
-    /* 1B4BD4 00389254 0000D1D8 */  lqc2       $vf17, 0x0($a2)
+    .word 0xD8D10000 /* .word 0xD8D10000 */
     /* 1B4BD8 00389258 8373004B */  vaddw.x    $vf14, $vf14, $vf0w
     /* 1B4BDC 0038925C C37B804A */  vaddw.y    $vf15, $vf15, $vf0w
     /* 1B4BE0 00389260 6842E84B */  vadd.xyzw  $vf9, $vf8, $vf8
@@ -34,10 +34,10 @@ glabel func_00389240
     /* 1B4C34 003892B4 D97BC14B */  vmuly.xyz  $vf15, $vf15, $vf1y
     /* 1B4C38 003892B8 1A84C14B */  vmulz.xyz  $vf16, $vf16, $vf1z
     /* 1B4C3C 003892BC 4004204A */  vaddx.w    $vf17, $vf0, $vf0x
-    /* 1B4C40 003892C0 0000EEF8 */  sqc2       $vf14, 0x0($a3)
-    /* 1B4C44 003892C4 1000EFF8 */  sqc2       $vf15, 0x10($a3)
-    /* 1B4C48 003892C8 2000F0F8 */  sqc2       $vf16, 0x20($a3)
-    /* 1B4C4C 003892CC 3000F1F8 */  sqc2       $vf17, 0x30($a3)
-    /* 1B4C50 003892D0 0800E003 */  jr         $ra
+    .word 0xF8EE0000 /* .word 0xF8EE0000 */
+    .word 0xF8EF0010 /* .word 0xF8EF0010 */
+    .word 0xF8F00020 /* .word 0xF8F00020 */
+    .word 0xF8F10030 /* .word 0xF8F10030 */
+    /* 1B4C50 003892D0 0800E003 */  jr         $31
     /* 1B4C54 003892D4 00000000 */   nop
 endlabel func_00389240

@@ -16,11 +16,11 @@ glabel func_003C1070
     /* 1ECA1C 003C109C 00000000 */  nop
     /* 1ECA20 003C10A0 C000BD27 */  addiu      $sp, $sp, 0xC0
     /* 1ECA24 003C10A4 00000000 */  nop
-    /* 1ECA28 003C10A8 BE0083A0 */  sb         $v1, 0xBE($a0)
+    /* 1ECA28 003C10A8 BE0083A0 */  sb         $3, 0xBE($4)
     /* 1ECA2C 003C10AC 00000000 */  nop
-    /* 1ECA30 003C10B0 BE0083A0 */  sb         $v1, 0xBE($a0)
+    /* 1ECA30 003C10B0 BE0083A0 */  sb         $3, 0xBE($4)
     /* 1ECA34 003C10B4 00000000 */  nop
-    /* 1ECA38 003C10B8 04004230 */  andi       $v0, $v0, 0x4
+    /* 1ECA38 003C10B8 04004230 */  andi       $2, $2, 0x4
     /* 1ECA3C 003C10BC 00000000 */  nop
     /* 1ECA40 003C10C0 00000000 */  nop
     /* 1ECA44 003C10C4 00000000 */  nop
@@ -38,7 +38,7 @@ glabel func_003C1070
     /* 1ECA74 003C10F4 00000000 */  nop
     /* 1ECA78 003C10F8 3000BD27 */  addiu      $sp, $sp, 0x30
     /* 1ECA7C 003C10FC 00000000 */  nop
-    /* 1ECA80 003C1100 0100422C */  sltiu      $v0, $v0, 0x1
+    /* 1ECA80 003C1100 0100422C */  sltiu      $2, $2, 0x1
     /* 1ECA84 003C1104 00000000 */  nop
     /* 1ECA88 003C1108 5000BD27 */  addiu      $sp, $sp, 0x50
     /* 1ECA8C 003C110C 00000000 */  nop

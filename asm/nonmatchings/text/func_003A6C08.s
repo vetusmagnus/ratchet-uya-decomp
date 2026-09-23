@@ -10,6 +10,6 @@ glabel func_003A6C08
     /* 1D259C 003A6C1C 00000000 */  nop
     /* 1D25A0 003A6C20 2000BD27 */  addiu      $sp, $sp, 0x20
     /* 1D25A4 003A6C24 00000000 */  nop
-    /* 1D25A8 003A6C28 000040AC */  sw         $zero, 0x0($v0)
+    /* 1D25A8 003A6C28 000040AC */  sw         $0, 0x0($2)
 endlabel func_003A6C08
     /* 1D25AC 003A6C2C 00000000 */  nop

@@ -8,6 +8,6 @@ glabel func_0037E098
     /* 1A9A24 0037E0A4 00000000 */  nop
     /* 1A9A28 0037E0A8 1000BD27 */  addiu      $sp, $sp, 0x10
     /* 1A9A2C 0037E0AC 00000000 */  nop
-    /* 1A9A30 0037E0B0 2000628C */  lw         $v0, 0x20($v1)
+    /* 1A9A30 0037E0B0 2000628C */  lw         $2, 0x20($3)
 endlabel func_0037E098
     /* 1A9A34 0037E0B4 00000000 */  nop

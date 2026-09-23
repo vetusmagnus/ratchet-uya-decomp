@@ -2,7 +2,7 @@
 nonmatching func_003BE948, 0x3C
 
 glabel func_003BE948
-    /* 1EA2C8 003BE948 2D104001 */  daddu      $v0, $t2, $zero
+    /* 1EA2C8 003BE948 2D104001 */  daddu      $2, $10, $0
     /* 1EA2CC 003BE94C 00000000 */  nop
     /* 1EA2D0 003BE950 A000BD27 */  addiu      $sp, $sp, 0xA0
     /* 1EA2D4 003BE954 00000000 */  nop

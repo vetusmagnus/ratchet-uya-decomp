@@ -69,6 +69,6 @@ glabel func_003D95B0
     /* 205030 003D96B0 0A82854A */  vmaddz.y   $vf8, $vf16, $vf5z
     /* 205034 003D96B4 4B7A044B */  vmaddw.x   $vf9, $vf15, $vf4w
     /* 205038 003D96B8 4B82854A */  vmaddw.y   $vf9, $vf16, $vf5w
-    /* 20503C 003D96BC 0800E003 */  jr         $ra
+    /* 20503C 003D96BC 0800E003 */  jr         $31
     /* 205040 003D96C0 00000000 */   nop
 endlabel func_003D95B0

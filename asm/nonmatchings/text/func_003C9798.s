@@ -5,18 +5,18 @@ nonmatching func_003C9798, 0xF0
 glabel func_003C9798
     /* 1F5118 003C9798 2200013C */  lui        $at, %hi(D_00225C00)
     /* 1F511C 003C979C 005C2124 */  addiu      $at, $at, %lo(D_00225C00)
-    /* 1F5120 003C97A0 300038D8 */  lqc2       $vf24, 0x30($at)
-    /* 1F5124 003C97A4 000026D8 */  lqc2       $vf6, 0x0($at)
-    /* 1F5128 003C97A8 100027D8 */  lqc2       $vf7, 0x10($at)
-    /* 1F512C 003C97AC 200028D8 */  lqc2       $vf8, 0x20($at)
-    /* 1F5130 003C97B0 400034D8 */  lqc2       $vf20, 0x40($at)
-    /* 1F5134 003C97B4 600036D8 */  lqc2       $vf22, 0x60($at)
+    .word 0xD8380030 /* .word 0xD8380030 */
+    .word 0xD8260000 /* .word 0xD8260000 */
+    .word 0xD8270010 /* .word 0xD8270010 */
+    .word 0xD8280020 /* .word 0xD8280020 */
+    .word 0xD8340040 /* .word 0xD8340040 */
+    .word 0xD8360060 /* .word 0xD8360060 */
     /* 1F5138 003C97B8 1E00013C */  lui        $at, %hi(D_001DA690)
     /* 1F513C 003C97BC 90A62124 */  addiu      $at, $at, %lo(D_001DA690)
-    /* 1F5140 003C97C0 00002BD8 */  lqc2       $vf11, 0x0($at)
-    /* 1F5144 003C97C4 10002CD8 */  lqc2       $vf12, 0x10($at)
-    /* 1F5148 003C97C8 20002DD8 */  lqc2       $vf13, 0x20($at)
-    /* 1F514C 003C97CC 30002ED8 */  lqc2       $vf14, 0x30($at)
+    .word 0xD82B0000 /* .word 0xD82B0000 */
+    .word 0xD82C0010 /* .word 0xD82C0010 */
+    .word 0xD82D0020 /* .word 0xD82D0020 */
+    .word 0xD82E0030 /* .word 0xD82E0030 */
     /* 1F5150 003C97D0 BC31CB4B */  vmulax.xyz ACC, $vf6, $vf11x
     /* 1F5154 003C97D4 BD38CB4B */  vmadday.xyz ACC, $vf7, $vf11y
     /* 1F5158 003C97D8 4A46CB4B */  vmaddz.xyz $vf25, $vf8, $vf11z
@@ -29,8 +29,8 @@ glabel func_003C9798
     /* 1F5174 003C97F4 BC31CE4B */  vmulax.xyz ACC, $vf6, $vf14x
     /* 1F5178 003C97F8 BD38CE4B */  vmadday.xyz ACC, $vf7, $vf14y
     /* 1F517C 003C97FC 0A47CE4B */  vmaddz.xyz $vf28, $vf8, $vf14z
-    /* 1F5180 003C9800 00008AD8 */  lqc2       $vf10, 0x0($a0)
-    /* 1F5184 003C9804 FFFFC620 */  addi       $a2, $a2, -0x1 /* handwritten instruction */
+    .word 0xD88A0000 /* .word 0xD88A0000 */
+    /* 1F5184 003C9804 FFFFC620 */  addi       $6, $6, -0x1 /* handwritten instruction */
     /* 1F5188 003C9808 BCC9CA4B */  vmulax.xyz ACC, $vf25, $vf10x
     /* 1F518C 003C980C BDD0CA4B */  vmadday.xyz ACC, $vf26, $vf10y
     /* 1F5190 003C9810 BED8CA4B */  vmaddaz.xyz ACC, $vf27, $vf10z
@@ -41,8 +41,8 @@ glabel func_003C9798
     /* 1F51A4 003C9824 00000000 */  nop
 .align 2
   .L003C9828:
-    /* 1F51A8 003C9828 20008AD8 */  lqc2       $vf10, 0x20($a0)
-    /* 1F51AC 003C982C 20008424 */  addiu      $a0, $a0, 0x20
+    .word 0xD88A0020 /* .word 0xD88A0020 */
+    /* 1F51AC 003C982C 20008424 */  addiu      $4, $4, 0x20
     /* 1F51B0 003C9830 EC708C4B */  vsub.xy    $vf3, $vf14, $vf12
     /* 1F51B4 003C9834 00000000 */  nop
     /* 1F51B8 003C9838 BCC9CA4B */  vmulax.xyz ACC, $vf25, $vf10x
@@ -54,15 +54,15 @@ glabel func_003C9798
     /* 1F51D0 003C9850 FF02004A */  vnop
     /* 1F51D4 003C9854 5AA38B4B */  vmulz.xy   $vf13, $vf20, $vf11z
     /* 1F51D8 003C9858 00182148 */  qmfc2.ni   $at, $vf3
-    /* 1F51DC 003C985C FFFFA520 */  addi       $a1, $a1, -0x1 /* handwritten instruction */
+    /* 1F51DC 003C985C FFFFA520 */  addi       $5, $5, -0x1 /* handwritten instruction */
     /* 1F51E0 003C9860 FD598E4B */  vabs.xy    $vf14, $vf11
-    /* 1F51E4 003C9864 200080CC */  pref       0x00, 0x20($a0)
-    /* 1F51E8 003C9868 FE170100 */  dsrl32     $v0, $at, 31
+    /* 1F51E4 003C9864 200080CC */  pref       0x00, 0x20($4)
+    /* 1F51E8 003C9868 FE170100 */  dsrl32     $2, $at, 31
     /* 1F51EC 003C986C C20F0100 */  srl        $at, $at, 31
-    /* 1F51F0 003C9870 25082200 */  or         $at, $at, $v0
-    /* 1F51F4 003C9874 0100C624 */  addiu      $a2, $a2, 0x1
-    /* 1F51F8 003C9878 EBFFA014 */  bnez       $a1, .L003C9828
-    /* 1F51FC 003C987C 0000C1A0 */   sb        $at, 0x0($a2)
-    /* 1F5200 003C9880 0800E003 */  jr         $ra
+    /* 1F51F0 003C9870 25082200 */  or         $at, $at, $2
+    /* 1F51F4 003C9874 0100C624 */  addiu      $6, $6, 0x1
+    /* 1F51F8 003C9878 EBFFA014 */  bnez       $5, .L003C9828
+    /* 1F51FC 003C987C 0000C1A0 */   sb        $at, 0x0($6)
+    /* 1F5200 003C9880 0800E003 */  jr         $31
     /* 1F5204 003C9884 00000000 */   nop
 endlabel func_003C9798

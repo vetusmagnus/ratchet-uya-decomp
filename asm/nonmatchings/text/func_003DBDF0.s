@@ -12,6 +12,6 @@ glabel func_003DBDF0
     /* 20778C 003DBE0C 00000000 */  nop
     /* 207790 003DBE10 5000BD27 */  addiu      $sp, $sp, 0x50
     /* 207794 003DBE14 00000000 */  nop
-    /* 207798 003DBE18 8C0046AC */  sw         $a2, 0x8C($v0)
+    /* 207798 003DBE18 8C0046AC */  sw         $6, 0x8C($2)
 endlabel func_003DBDF0
     /* 20779C 003DBE1C 00000000 */  nop

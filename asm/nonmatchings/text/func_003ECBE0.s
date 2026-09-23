@@ -2,11 +2,11 @@
 nonmatching func_003ECBE0, 0x3C
 
 glabel func_003ECBE0
-    /* 218560 003ECBE0 10008CE4 */  swc1       $f12, 0x10($a0)
+    /* 218560 003ECBE0 10008CE4 */  swc1       $f12, 0x10($4)
     /* 218564 003ECBE4 00000000 */  nop
-    /* 218568 003ECBE8 18008CE4 */  swc1       $f12, 0x18($a0)
+    /* 218568 003ECBE8 18008CE4 */  swc1       $f12, 0x18($4)
     /* 21856C 003ECBEC 00000000 */  nop
-    /* 218570 003ECBF0 440085AC */  sw         $a1, 0x44($a0)
+    /* 218570 003ECBF0 440085AC */  sw         $5, 0x44($4)
     /* 218574 003ECBF4 00000000 */  nop
     /* 218578 003ECBF8 1000BD27 */  addiu      $sp, $sp, 0x10
     /* 21857C 003ECBFC 00000000 */  nop

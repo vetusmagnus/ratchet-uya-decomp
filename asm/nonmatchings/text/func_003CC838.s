@@ -18,6 +18,6 @@ glabel func_003CC838
     /* 1F81EC 003CC86C 3C00014B */  vaddax.x   ACC, $vf0, $vf1x
     /* 1F81F0 003CC870 7E009D4A */  vsubaz.y   ACC, $vf0, $vf29z
     /* 1F81F4 003CC874 3D005D4A */  vadday.z   ACC, $vf0, $vf29y
-    /* 1F81F8 003CC878 0800E003 */  jr         $ra
+    /* 1F81F8 003CC878 0800E003 */  jr         $31
     /* 1F81FC 003CC87C 4828DE4B */   vmaddx.xyz $vf1, $vf5, $vf30x
 endlabel func_003CC838

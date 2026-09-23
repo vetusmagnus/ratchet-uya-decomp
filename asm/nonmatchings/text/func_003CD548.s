@@ -9,15 +9,15 @@ glabel func_003CD548
     /* 1F8ED8 003CD558 8F41E54B */   vmsubw.xyzw $vf6, $vf8, $vf5w
 .align 2
   alabel D_003CD55C
-    /* 1F8EDC 003CD55C F7FF2014 */  bnez       $at, .L003CD53C
+    /* 1F8EDC 003CD55C F7FF2014 */  .word 0x1420FFF7 /* bnez $at, .L003CD53C -- raw so ee-as can't pad the short loop */
     /* 1F8EE0 003CD560 00000000 */   nop
-    /* 1F8EE4 003CD564 E7FF4010 */  beqz       $v0, .L003CD504
+    /* 1F8EE4 003CD564 E7FF4010 */  beqz       $2, .L003CD504
     /* 1F8EE8 003CD568 00000000 */   nop
 .align 2
   .L003CD56C:
-    /* 1F8EEC 003CD56C 3D00073C */  lui        $a3, %hi(D_003CD55C)
-    /* 1F8EF0 003CD570 5CD5E724 */  addiu      $a3, $a3, %lo(D_003CD55C)
-    /* 1F8EF4 003CD574 2DF8C000 */  daddu      $ra, $a2, $zero
+    /* 1F8EEC 003CD56C 3D00073C */  lui        $7, %hi(D_003CD55C)
+    /* 1F8EF0 003CD570 5CD5E724 */  addiu      $7, $7, %lo(D_003CD55C)
+    /* 1F8EF4 003CD574 2DF8C000 */  daddu      $31, $6, $0
     /* 1F8EF8 003CD578 0209214A */  vaddz.w    $vf4, $vf1, $vf1z
     /* 1F8EFC 003CD57C 4211224A */  vaddz.w    $vf5, $vf2, $vf2z
     /* 1F8F00 003CD580 BF11E44B */  vmulaw.xyzw ACC, $vf2, $vf4w
@@ -25,7 +25,7 @@ glabel func_003CD548
     /* 1F8F08 003CD588 8F09E54B */   vmsubw.xyzw $vf6, $vf1, $vf5w
 .align 2
   .L003CD58C:
-    /* 1F8F0C 003CD58C 1000AD25 */  addiu      $t5, $t5, 0x10
-    /* 1F8F10 003CD590 0800E003 */  jr         $ra
-    /* 1F8F14 003CD594 F0FFA6F9 */   sqc2      $vf6, -0x10($t5)
+    /* 1F8F0C 003CD58C 1000AD25 */  addiu      $13, $13, 0x10
+    /* 1F8F10 003CD590 0800E003 */  jr         $31
+    .word 0xF9A6FFF0 /* .word 0xF9A6FFF0 */
 endlabel func_003CD548

@@ -3,18 +3,18 @@
 nonmatching func_003CC4B0, 0x148
 
 glabel func_003CC4B0
-    /* 1F7E30 003CC4B0 04008C8C */  lw         $t4, 0x4($a0)
-    /* 1F7E34 003CC4B4 10009BD8 */  lqc2       $vf27, 0x10($a0)
+    /* 1F7E30 003CC4B0 04008C8C */  lw         $12, 0x4($4)
+    .word 0xD89B0010 /* .word 0xD89B0010 */
     /* 1F7E38 003CC4B8 1E00013C */  lui        $at, %hi(D_001DA750)
     /* 1F7E3C 003CC4BC 50A72124 */  addiu      $at, $at, %lo(D_001DA750)
-    /* 1F7E40 003CC4C0 00003CD8 */  lqc2       $vf28, 0x0($at)
-    /* 1F7E44 003CC4C4 00700A3C */  lui        $t2, (0x70000010 >> 16)
-    /* 1F7E48 003CC4C8 00000B24 */  addiu      $t3, $zero, 0x0
+    .word 0xD83C0000 /* .word 0xD83C0000 */
+    /* 1F7E44 003CC4C4 00700A3C */  lui        $10, (0x70000010 >> 16)
+    /* 1F7E48 003CC4C8 00000B24 */  addiu      $11, $0, 0x0
     /* 1F7E4C 003CC4CC 1E00013C */  lui        $at, %hi(D_001DA730)
     /* 1F7E50 003CC4D0 30A72124 */  addiu      $at, $at, %lo(D_001DA730)
-    /* 1F7E54 003CC4D4 00003ED8 */  lqc2       $vf30, 0x0($at)
+    .word 0xD83E0000 /* .word 0xD83E0000 */
     /* 1F7E58 003CC4D8 AC07DE4B */  vsub.xyz   $vf30, $vf0, $vf30
-    /* 1F7E5C 003CC4DC 00108C44 */  mtc1       $t4, $f2
+    /* 1F7E5C 003CC4DC 00108C44 */  mtc1       $12, $f2
     /* 1F7E60 003CC4E0 A0108046 */  cvt.s.w    $f2, $f2
     /* 1F7E64 003CC4E4 C840013C */  lui        $at, (0x40C8F5C3 >> 16)
     /* 1F7E68 003CC4E8 C3F52134 */  ori        $at, $at, (0x40C8F5C3 & 0xFFFF)
@@ -61,7 +61,7 @@ glabel func_003CC4B0
     /* 1F7F0C 003CC58C C1185F4A */  vaddy.z    $vf3, $vf3, $vf31y
     /* 1F7F10 003CC590 1E00013C */  lui        $at, %hi(D_001DA740)
     /* 1F7F14 003CC594 40A72124 */  addiu      $at, $at, %lo(D_001DA740)
-    /* 1F7F18 003CC598 00003AD8 */  lqc2       $vf26, 0x0($at)
+    .word 0xD83A0000 /* .word 0xD83A0000 */
     /* 1F7F1C 003CC59C 9BD6DB4B */  vmulw.xyz  $vf26, $vf26, $vf27w
 .align 2
   .L003CC5A0:
@@ -69,22 +69,22 @@ glabel func_003CC4B0
     /* 1F7F24 003CC5A4 BD10DA4B */  vmadday.xyz ACC, $vf2, $vf26y
     /* 1F7F28 003CC5A8 8A1EDA4B */  vmaddz.xyz $vf26, $vf3, $vf26z
     /* 1F7F2C 003CC5AC 68D1DB4B */  vadd.xyz   $vf5, $vf26, $vf27
-    /* 1F7F30 003CC5B0 000045F9 */  sqc2       $vf5, (0x70000000 & 0xFFFF)($t2)
+    /* 1F7F30 003CC5B0 000045F9 */  sqc2       $vf5, (0x70000000 & 0xFFFF)($10)
     /* 1F7F34 003CC5B4 6829DC4B */  vadd.xyz   $vf5, $vf5, $vf28
-    /* 1F7F38 003CC5B8 100045F9 */  sqc2       $vf5, (0x70000010 & 0xFFFF)($t2)
-    /* 1F7F3C 003CC5BC 20004A25 */  addiu      $t2, $t2, %lo(D_70000020)
+    /* 1F7F38 003CC5B8 100045F9 */  sqc2       $vf5, (0x70000010 & 0xFFFF)($10)
+    /* 1F7F3C 003CC5BC 20004A25 */  addiu      $10, $10, %lo(D_70000020)
     /* 1F7F40 003CC5C0 00000000 */  nop
-    /* 1F7F44 003CC5C4 FFFF8C21 */  addi       $t4, $t4, -0x1 /* handwritten instruction */
+    /* 1F7F44 003CC5C4 FFFF8C21 */  addi       $12, $12, -0x1 /* handwritten instruction */
     /* 1F7F48 003CC5C8 00000000 */  nop
-    /* 1F7F4C 003CC5CC F4FF8015 */  bnez       $t4, .L003CC5A0
-    /* 1F7F50 003CC5D0 01006B25 */   addiu     $t3, $t3, 0x1
+    /* 1F7F4C 003CC5CC F4FF8015 */  .word 0x1580FFF4 /* bnez $12, .L003CC5A0 -- raw so ee-as can't pad the short loop */
+    /* 1F7F50 003CC5D0 01006B25 */   addiu     $11, $11, 0x1
     /* 1F7F54 003CC5D4 0070013C */  lui        $at, (0x70000010 >> 16)
     /* 1F7F58 003CC5D8 000025D8 */  lqc2       $vf5, (0x70000000 & 0xFFFF)($at)
-    /* 1F7F5C 003CC5DC 000045F9 */  sqc2       $vf5, 0x0($t2)
+    .word 0xF9450000 /* .word 0xF9450000 */
     /* 1F7F60 003CC5E0 100025D8 */  lqc2       $vf5, (0x70000010 & 0xFFFF)($at)
-    /* 1F7F64 003CC5E4 100045F9 */  sqc2       $vf5, 0x10($t2)
-    /* 1F7F68 003CC5E8 01006B25 */  addiu      $t3, $t3, 0x1
-    /* 1F7F6C 003CC5EC C0DE8127 */  addiu      $at, $gp, %gp_rel(D_001DA770)
-    /* 1F7F70 003CC5F0 0800E003 */  jr         $ra
-    /* 1F7F74 003CC5F4 00002BAC */   sw        $t3, 0x0($at)
+    .word 0xF9450010 /* .word 0xF9450010 */
+    /* 1F7F68 003CC5E8 01006B25 */  addiu      $11, $11, 0x1
+    /* 1F7F6C 003CC5EC C0DE8127 */  addiu      $at, $gp, -0x2140
+    /* 1F7F70 003CC5F0 0800E003 */  jr         $31
+    /* 1F7F74 003CC5F4 00002BAC */   sw        $11, 0x0($at)
 endlabel func_003CC4B0

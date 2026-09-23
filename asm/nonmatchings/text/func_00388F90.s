@@ -4,8 +4,8 @@ nonmatching func_00388F90, 0x88
 glabel func_00388F90
     /* 1B4910 00388F90 00600144 */  mfc1       $at, $f12
     /* 1B4914 00388F94 0018A148 */  qmtc2.ni   $at, $vf3
-    /* 1B4918 00388F98 0000A1D8 */  lqc2       $vf1, 0x0($a1)
-    /* 1B491C 00388F9C 0000C2D8 */  lqc2       $vf2, 0x0($a2)
+    .word 0xD8A10000 /* .word 0xD8A10000 */
+    .word 0xD8C20000 /* .word 0xD8C20000 */
     /* 1B4920 00388FA0 C400234A */  vsubx.w    $vf3, $vf0, $vf3x
     /* 1B4924 00388FA4 C301C04B */  vaddw.xyz  $vf7, $vf0, $vf0w
     /* 1B4928 00388FA8 5B08E34B */  vmulw.xyzw $vf1, $vf1, $vf3w
@@ -19,8 +19,8 @@ glabel func_00388F90
     /* 1B4948 00388FC8 3D28054B */  vadday.x   ACC, $vf5, $vf5y
     /* 1B494C 00388FCC BE38054B */  vmaddaz.x  ACC, $vf7, $vf5z
     /* 1B4950 00388FD0 4B39054B */  vmaddw.x   $vf5, $vf7, $vf5w
-    /* 1B4954 00388FD4 00302948 */  qmfc2.ni   $t1, $vf6
-    /* 1B4958 00388FD8 07002105 */  bgez       $t1, .L00388FF8
+    /* 1B4954 00388FD4 00302948 */  qmfc2.ni   $9, $vf6
+    /* 1B4958 00388FD8 07002105 */  bgez       $9, .L00388FF8
     /* 1B495C 00388FDC 00000000 */   nop
     /* 1B4960 00388FE0 2C09E24B */  vsub.xyzw  $vf4, $vf1, $vf2
     /* 1B4964 00388FE4 6A21E44B */  vmul.xyzw  $vf5, $vf4, $vf4
@@ -35,7 +35,7 @@ glabel func_00388F90
     /* 1B4980 00389000 BE03654A */  vrsqrt     Q, $vf0w, $vf5x
     /* 1B4984 00389004 BF03004A */  vwaitq
     /* 1B4988 00389008 5C20E04B */  vmulq.xyzw $vf1, $vf4, Q
-    /* 1B498C 0038900C 000081F8 */  sqc2       $vf1, 0x0($a0)
-    /* 1B4990 00389010 0800E003 */  jr         $ra
+    .word 0xF8810000 /* .word 0xF8810000 */
+    /* 1B4990 00389010 0800E003 */  jr         $31
     /* 1B4994 00389014 00000000 */   nop
 endlabel func_00388F90

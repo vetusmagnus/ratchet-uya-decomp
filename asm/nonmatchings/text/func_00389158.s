@@ -3,12 +3,12 @@
 nonmatching func_00389158, 0xE4
 
 glabel func_00389158
-    /* 1B4AD8 00389158 0000C8D8 */  lqc2       $vf8, 0x0($a2)
-    /* 1B4ADC 0038915C 003F023C */  lui        $v0, (0x3F000000 >> 16)
+    .word 0xD8C80000 /* .word 0xD8C80000 */
+    /* 1B4ADC 0038915C 003F023C */  lui        $2, (0x3F000000 >> 16)
     /* 1B4AE0 00389160 00600144 */  mfc1       $at, $f12
     /* 1B4AE4 00389164 0305C04B */  vaddw.xyz  $vf20, $vf0, $vf0w
     /* 1B4AE8 00389168 6A42C84B */  vmul.xyz   $vf9, $vf8, $vf8
-    /* 1B4AEC 0038916C 0058A248 */  qmtc2.ni   $v0, $vf11
+    /* 1B4AEC 0038916C 0058A248 */  qmtc2.ni   $2, $vf11
     /* 1B4AF0 00389170 0050A148 */  qmtc2.ni   $at, $vf10
     /* 1B4AF4 00389174 C20D0100 */  srl        $at, $at, 23
     /* 1B4AF8 00389178 3D48094B */  vadday.x   ACC, $vf9, $vf9y
@@ -28,7 +28,7 @@ glabel func_00389158
     /* 1B4B30 003891B0 1C42C04B */  vmulq.xyz  $vf8, $vf8, Q
     /* 1B4B34 003891B4 1802214A */  vmulx.w    $vf8, $vf0, $vf1x
     /* 1B4B38 003891B8 6842E84B */  vadd.xyzw  $vf9, $vf8, $vf8
-    /* 1B4B3C 003891BC 0000A1D8 */  lqc2       $vf1, 0x0($a1)
+    .word 0xD8A10000 /* .word 0xD8A10000 */
     /* 1B4B40 003891C0 9B4AC84B */  vmulw.xyz  $vf10, $vf9, $vf8w
     /* 1B4B44 003891C4 D84AC84B */  vmulx.xyz  $vf11, $vf9, $vf8x
     /* 1B4B48 003891C8 194BC84A */  vmuly.yz   $vf12, $vf9, $vf8y
@@ -54,13 +54,13 @@ glabel func_00389158
     /* 1B4B98 00389218 BC71C14B */  vmulax.xyz ACC, $vf14, $vf1x
     /* 1B4B9C 0038921C BD78C14B */  vmadday.xyz ACC, $vf15, $vf1y
     /* 1B4BA0 00389220 4A80C14B */  vmaddz.xyz $vf1, $vf16, $vf1z
-    /* 1B4BA4 00389224 0800E003 */  jr         $ra
-    /* 1B4BA8 00389228 000081F8 */   sqc2      $vf1, 0x0($a0)
+    /* 1B4BA4 00389224 0800E003 */  jr         $31
+    .word 0xF8810000 /* .word 0xF8810000 */
 .align 2
   .L0038922C:
-    /* 1B4BAC 0038922C 0000A1D8 */  lqc2       $vf1, 0x0($a1)
+    .word 0xD8A10000 /* .word 0xD8A10000 */
     /* 1B4BB0 00389230 00000000 */  nop
-    /* 1B4BB4 00389234 0800E003 */  jr         $ra
-    /* 1B4BB8 00389238 000081F8 */   sqc2      $vf1, 0x0($a0)
+    /* 1B4BB4 00389234 0800E003 */  jr         $31
+    .word 0xF8810000 /* .word 0xF8810000 */
 endlabel func_00389158
     /* 1B4BBC 0038923C 00000000 */  nop

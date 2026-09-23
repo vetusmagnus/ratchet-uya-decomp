@@ -2,12 +2,12 @@
 nonmatching func_003BE6A8, 0x94
 
 glabel func_003BE6A8
-    /* 1EA028 003BE6A8 00008044 */  mtc1       $zero, $f0
+    /* 1EA028 003BE6A8 00008044 */  mtc1       $0, $f0
     /* 1EA02C 003BE6AC D0FFBD27 */  addiu      $sp, $sp, -0x30
     /* 1EA030 003BE6B0 1800B5E7 */  swc1       $f21, 0x18($sp)
     /* 1EA034 003BE6B4 32700046 */  c.eq.s     $f14, $f0
     /* 1EA038 003BE6B8 1000B4E7 */  swc1       $f20, 0x10($sp)
-    /* 1EA03C 003BE6BC 0000BFFF */  sd         $ra, 0x0($sp)
+    /* 1EA03C 003BE6BC 0000BFFF */  sd         $31, 0x0($sp)
     /* 1EA040 003BE6C0 06650046 */  mov.s      $f20, $f12
     /* 1EA044 003BE6C4 2000B6E7 */  swc1       $f22, 0x20($sp)
     /* 1EA048 003BE6C8 03000045 */  bc1f       .L003BE6D8
@@ -37,11 +37,11 @@ glabel func_003BE6A8
     /* 1EA0A0 003BE720 00A00046 */  add.s      $f0, $f20, $f0
 .align 2
   .L003BE724:
-    /* 1EA0A4 003BE724 0000BFDF */  ld         $ra, 0x0($sp)
+    /* 1EA0A4 003BE724 0000BFDF */  ld         $31, 0x0($sp)
     /* 1EA0A8 003BE728 2000B6C7 */  lwc1       $f22, 0x20($sp)
     /* 1EA0AC 003BE72C 1800B5C7 */  lwc1       $f21, 0x18($sp)
     /* 1EA0B0 003BE730 1000B4C7 */  lwc1       $f20, 0x10($sp)
-    /* 1EA0B4 003BE734 0800E003 */  jr         $ra
+    /* 1EA0B4 003BE734 0800E003 */  jr         $31
     /* 1EA0B8 003BE738 3000BD27 */   addiu     $sp, $sp, 0x30
 endlabel func_003BE6A8
     /* 1EA0BC 003BE73C 00000000 */  nop

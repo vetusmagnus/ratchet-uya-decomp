@@ -2,8 +2,8 @@
 nonmatching func_00388F50, 0x40
 
 glabel func_00388F50
-    /* 1B48D0 00388F50 0000A1D8 */  lqc2       $vf1, 0x0($a1)
-    /* 1B48D4 00388F54 0000C2D8 */  lqc2       $vf2, 0x0($a2)
+    .word 0xD8A10000 /* .word 0xD8A10000 */
+    .word 0xD8C20000 /* .word 0xD8C20000 */
     /* 1B48D8 00388F58 4302C04B */  vaddw.xyz  $vf9, $vf0, $vf0w
     /* 1B48DC 00388F5C EA10214A */  vmul.w     $vf3, $vf2, $vf1
     /* 1B48E0 00388F60 2A11C14B */  vmul.xyz   $vf4, $vf2, $vf1
@@ -16,6 +16,6 @@ glabel func_00388F50
     /* 1B48FC 00388F7C 282AC64B */  vadd.xyz   $vf8, $vf5, $vf6
     /* 1B4900 00388F80 2842C74B */  vadd.xyz   $vf8, $vf8, $vf7
     /* 1B4904 00388F84 041A244A */  vsubx.w    $vf8, $vf3, $vf4x
-    /* 1B4908 00388F88 0800E003 */  jr         $ra
-    /* 1B490C 00388F8C 000088F8 */   sqc2      $vf8, 0x0($a0)
+    /* 1B4908 00388F88 0800E003 */  jr         $31
+    .word 0xF8880000 /* .word 0xF8880000 */
 endlabel func_00388F50

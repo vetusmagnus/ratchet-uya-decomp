@@ -2,7 +2,7 @@
 nonmatching func_003BF8F8, 0x14
 
 glabel func_003BF8F8
-    /* 1EB278 003BF8F8 0000C37C */  sq         $v1, 0x0($a2)
+    .word 0x7CC30000 /* .word 0x7CC30000 */
     /* 1EB27C 003BF8FC 00000000 */  nop
     /* 1EB280 003BF900 3000BD27 */  addiu      $sp, $sp, 0x30
     /* 1EB284 003BF904 00000000 */  nop

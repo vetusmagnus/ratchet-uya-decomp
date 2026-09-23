@@ -2,7 +2,7 @@
 nonmatching func_003BFA18, 0xDC
 
 glabel func_003BFA18
-    /* 1EB398 003BFA18 0000A2AC */  sw         $v0, 0x0($a1)
+    /* 1EB398 003BFA18 0000A2AC */  sw         $2, 0x0($5)
     /* 1EB39C 003BFA1C 00000000 */  nop
     /* 1EB3A0 003BFA20 00000000 */  nop
     /* 1EB3A4 003BFA24 00000000 */  nop
@@ -12,7 +12,7 @@ glabel func_003BFA18
     /* 1EB3B4 003BFA34 00000000 */  nop
     /* 1EB3B8 003BFA38 5000BD27 */  addiu      $sp, $sp, 0x50
     /* 1EB3BC 003BFA3C 00000000 */  nop
-    /* 1EB3C0 003BFA40 14008CE4 */  swc1       $f12, 0x14($a0)
+    /* 1EB3C0 003BFA40 14008CE4 */  swc1       $f12, 0x14($4)
     /* 1EB3C4 003BFA44 00000000 */  nop
     /* 1EB3C8 003BFA48 3000BD27 */  addiu      $sp, $sp, 0x30
     /* 1EB3CC 003BFA4C 00000000 */  nop

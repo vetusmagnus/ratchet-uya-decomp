@@ -12,6 +12,6 @@ glabel func_003BEB18
     /* 1EA4B4 003BEB34 00000000 */  nop
     /* 1EA4B8 003BEB38 7001BD27 */  addiu      $sp, $sp, 0x170
     /* 1EA4BC 003BEB3C 00000000 */  nop
-    /* 1EA4C0 003BEB40 21108200 */  addu       $v0, $a0, $v0
+    /* 1EA4C0 003BEB40 21108200 */  addu       $2, $4, $2
 endlabel func_003BEB18
     /* 1EA4C4 003BEB44 00000000 */  nop
